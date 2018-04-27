@@ -7,7 +7,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production node server.js",
     "test": "node ace test",
-    "dev": "npm run development",
+    "dev": "concurrently --kill-others-on-fail \"adonis serve --dev\" \"npm run development\"",
     "development": "cross-env NODE_ENV=development node_modules/.bin/webpack --watch --hide-modules --progress"
   },
   "keywords": [
@@ -34,6 +34,7 @@
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "concurrently": "^3.5.1",
     "cross-env": "^5.1.4",
     "css-loader": "^0.28.11",
     "extract-text-webpack-plugin": "^3.0.2",
