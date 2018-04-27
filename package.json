@@ -1,0 +1,51 @@
+{
+  "name": "adonis-react-app",
+  "version": "1.0.0",
+  "adonis-version": "4.1.0",
+  "description": "An application boilerplate for Adonisjs with a React frontend",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node server.js",
+    "test": "node ace test",
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/.bin/webpack --watch --hide-modules --progress"
+  },
+  "keywords": [
+    "adonisjs",
+    "adonis-app",
+    "adonis-react"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@adonisjs/ace": "^5.0.1",
+    "@adonisjs/auth": "^3.0.4",
+    "@adonisjs/bodyparser": "^2.0.2",
+    "@adonisjs/cors": "^1.0.5",
+    "@adonisjs/fold": "^4.0.7",
+    "@adonisjs/framework": "^5.0.5",
+    "@adonisjs/ignitor": "^2.0.6",
+    "@adonisjs/lucid": "^5.0.3",
+    "@adonisjs/session": "^1.0.23",
+    "@adonisjs/shield": "^1.0.6",
+    "axios": "^0.18.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.1.4",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "node-sass": "^4.9.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "sass-loader": "^7.0.1",
+    "webpack": "^3.11.0",
+    "webpack-cli": "^2.0.15"
+  },
+  "devDependencies": {},
+  "autoload": {
+    "App": "./app"
+  }
+}
