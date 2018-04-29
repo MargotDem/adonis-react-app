@@ -42,8 +42,7 @@
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "sass-loader": "^7.0.1",
-    "webpack": "^3.11.0",
-    "webpack-cli": "^2.0.15"
+    "webpack": "^3.11.0"
   },
   "devDependencies": {},
   "autoload": {

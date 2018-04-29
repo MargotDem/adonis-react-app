@@ -19551,11 +19551,11 @@ var App = function (_Component) {
       return _react2.default.createElement(
         'section',
         null,
-        _react2.default.createElement('div', { 'class': 'logo' }),
-        _react2.default.createElement('div', { 'class': 'title' }),
+        _react2.default.createElement('div', { className: 'logo' }),
+        _react2.default.createElement('div', { className: 'title' }),
         _react2.default.createElement(
           'div',
-          { 'class': 'subtitle' },
+          { className: 'subtitle' },
           _react2.default.createElement(
             'p',
             null,
