@@ -1,8 +1,23 @@
 'use strict'
 
+/** @type {import('@adonisjs/framework/src/Env')} */
 const Env = use('Env')
 
 module.exports = {
+
+  /*
+  |--------------------------------------------------------------------------
+  | Application Name
+  |--------------------------------------------------------------------------
+  |
+  | This value is the name of your application and can be used when you
+  | need to place the application's name in a email, view or
+  | other location.
+  |
+  */
+
+  name: Env.get('APP_NAME', 'AdonisJs'),
+
   /*
   |--------------------------------------------------------------------------
   | App Key
@@ -12,7 +27,7 @@ module.exports = {
   | to encrypted cookies, sessions and other sensitive data.
   |
   */
-  appKey: Env.get('APP_KEY'),
+  appKey: Env.getOrFail('APP_KEY'),
 
   http: {
     /*
@@ -20,7 +35,7 @@ module.exports = {
     | Allow Method Spoofing
     |--------------------------------------------------------------------------
     |
-    | Method spoofing allows to make requests by spoofing the http verb.
+    | Method spoofing allows you to make requests by spoofing the http verb.
     | Which means you can make a GET request but instruct the server to
     | treat as a POST or PUT request. If you want this feature, set the
     | below value to true.
@@ -33,10 +48,10 @@ module.exports = {
     | Trust Proxy
     |--------------------------------------------------------------------------
     |
-    | Trust proxy defines whether X-Forwaded-* headers should be trusted or not.
+    | Trust proxy defines whether X-Forwarded-* headers should be trusted or not.
     | When your application is behind a proxy server like nginx, these values
     | are set automatically and should be trusted. Apart from setting it
-    | to true or false Adonis supports handful or ways to allow proxy
+    | to true or false Adonis supports a handful of ways to allow proxy
     | values. Read documentation for that.
     |
     */
@@ -47,7 +62,7 @@ module.exports = {
     | Subdomains
     |--------------------------------------------------------------------------
     |
-    | Offset to be used for returning subdomains for a given request.For
+    | Offset to be used for returning subdomains for a given request. For
     | majority of applications it will be 2, until you have nested
     | sudomains.
     | cheatsheet.adonisjs.com      - offset - 2
@@ -67,12 +82,13 @@ module.exports = {
     */
     jsonpCallback: 'callback',
 
+
     /*
     |--------------------------------------------------------------------------
     | Etag
     |--------------------------------------------------------------------------
     |
-    | Set etag on all HTTP response. In order to disable for selected routes,
+    | Set etag on all HTTP responses. In order to disable for selected routes,
     | you can call the `response.send` with an options object as follows.
     |
     | response.send('Hello', { ignoreEtag: true })
@@ -100,9 +116,9 @@ module.exports = {
     | Dot Files
     |--------------------------------------------------------------------------
     |
-    | Define how to treat dot files when trying to server static resources.
+    | Define how to treat dot files when trying to serve static resources.
     | By default it is set to ignore, which will pretend that dotfiles
-    | does not exists.
+    | do not exist.
     |
     | Can be one of the following
     | ignore, deny, allow
@@ -206,5 +222,22 @@ module.exports = {
       filename: 'adonis.log',
       level: 'info'
     }
+  },
+
+  /*
+  |--------------------------------------------------------------------------
+  | Generic Cookie Options
+  |--------------------------------------------------------------------------
+  |
+  | The following cookie options are generic settings used by AdonisJs to create
+  | cookies. However, some parts of the application like `sessions` can have
+  | seperate settings for cookies inside `config/session.js`.
+  |
+  */
+  cookie: {
+    httpOnly: true,
+    sameSite: false,
+    path: '/',
+    maxAge: 7200
   }
 }
