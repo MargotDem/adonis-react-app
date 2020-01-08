@@ -1,8 +1,8 @@
 {
-  "name": "adonis-fullstack-app",
-  "version": "4.1.0",
+  "name": "adonis-react-app",
+  "version": "2.0.0",
   "adonis-version": "4.1.0",
-  "description": "The fullstack application boilerplate for Adonisjs",
+  "description": "An application boilerplate for Adonisjs with a React frontend",
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=production node server.js",
@@ -12,7 +12,8 @@
   },
   "keywords": [
     "adonisjs",
-    "adonis-app"
+    "adonis-app",
+    "adonis-react"
   ],
   "author": "",
   "license": "UNLICENSED",
